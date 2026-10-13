@@ -23,8 +23,8 @@ public class WebServer {
     }
 
     public void start() throws Exception {
-        server = HttpServer.create(new InetSocketAddress(8080), 0);
-
+        int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
+server = HttpServer.create(new InetSocketAddress("0.0.0.0", port), 0);
         String[] pages = {
             "/", "/farmers.html", "/land.html",
             "/crop.html", "/fertilizer.html",

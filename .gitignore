@@ -1,0 +1,8 @@
+﻿out/
+*.class
+.vscode/
+bin/
+*.log
+.env
+.env.*
+!.env.example
